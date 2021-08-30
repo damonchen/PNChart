@@ -9,7 +9,7 @@
 import UIKit
 import QuartzCore
 
-class PNLineChart: UIView{
+public class PNLineChart: UIView{
     public var xLabels: NSArray = []{
         didSet {
             if self.showLabel {

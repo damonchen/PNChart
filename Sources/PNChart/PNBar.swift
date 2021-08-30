@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PNBar: UIView {
+public class PNBar: UIView {
 
     // Time brfore bar starts to animate
     var startAnimationTime: Double = 0

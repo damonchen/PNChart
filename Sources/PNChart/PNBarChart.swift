@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PNBarChart: UIView {
+public class PNBarChart: UIView {
     var bars = NSMutableArray()
     var xLabelWidth: CGFloat!
     var yValueMax: CGFloat!

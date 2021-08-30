@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PNPieChart: PNGenericChart {
+public class PNPieChart: PNGenericChart {
     lazy var items: [PNPieChartDataItem] = {
         return [PNPieChartDataItem]()
     }()
