@@ -168,7 +168,7 @@ class PNBarChart: UIView {
             self.layer.addSublayer(self.chartBottomLine)
             // Add Left Chart Line
             self.chartLeftLine = CAShapeLayer()
-            self.chartLeftLine.lineCap = kCALineCapButt
+            self.chartLeftLine.lineCap = CAShapeLayerLineCap.butt
             self.chartLeftLine.fillColor = UIColor.white.cgColor
             self.chartLeftLine.lineWidth = 1
             self.chartLeftLine.strokeEnd = 0
