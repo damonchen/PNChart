@@ -63,7 +63,7 @@ public class PNPieChart: PNGenericChart {
     // Multiple selection
     var enableMultipleSelection: Bool = true
     
-    init(frame: CGRect, items: [PNPieChartDataItem]) {
+    public override init(frame: CGRect, items: [PNPieChartDataItem]) {
         super.init(frame: frame)
         self.items = items
         self.baseInit()

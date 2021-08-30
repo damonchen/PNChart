@@ -48,7 +48,7 @@ public class PNBar: UIView {
         }
     }
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         self.chartLine = CAShapeLayer()
         self.chartLine.lineCap = CAShapeLayerLineCap.butt

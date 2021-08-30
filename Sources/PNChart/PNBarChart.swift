@@ -56,7 +56,7 @@ public class PNBarChart: UIView {
     var yMinValue: CGFloat!
     var animationType: AnimationType = .Default
     // Initialize Methods
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = PNLightGrey
         self.clipsToBounds = true

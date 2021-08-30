@@ -9,7 +9,7 @@
 import UIKit
 
 public class PNChartLabel: UILabel {
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         self.font = UIFont.boldSystemFont(ofSize: 10.0)
         self.textColor = PNGrey
