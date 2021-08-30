@@ -75,8 +75,8 @@ class PNLineChart: UIView{
                 // Create as many chart line layers as number of data
                 let chartObj = chart as! PNLineChartData
                 let chartLine: CAShapeLayer = CAShapeLayer()
-                chartLine.lineCap = kCALineCapButt
-                chartLine.lineJoin = kCALineJoinMiter
+                chartLine.lineCap = CAShapeLayerLineCap.butt
+                chartLine.lineJoin = CAShapeLayerLineJoin.miter
                 chartLine.fillColor = UIColor.white.cgColor
                 chartLine.lineWidth = lineWidth
                 chartLine.strokeEnd = 0
@@ -86,8 +86,8 @@ class PNLineChart: UIView{
                 // Create as many chart point layers as number of data
                 let pointLayer: CAShapeLayer = CAShapeLayer()
                 pointLayer.strokeColor = chartObj.color.cgColor
-                pointLayer.lineCap = kCALineCapRound
-                pointLayer.lineJoin = kCALineJoinBevel
+                pointLayer.lineCap = CAShapeLayerLineCap.round
+                pointLayer.lineJoin = CAShapeLayerLineJoin.bevel
                 pointLayer.fillColor = nil
                 pointLayer.lineWidth = circleStrokeWidth
                 layer.addSublayer(pointLayer)
@@ -368,7 +368,7 @@ class PNLineChart: UIView{
             CATransaction.begin()
             let path = CABasicAnimation(keyPath: "strokeEnd")
             path.duration = 1
-            path.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+            path.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
             path.fromValue = 0
             path.toValue = 1
             
@@ -455,7 +455,7 @@ class PNLineChart: UIView{
 extension PNLineChart {
     func heightOfString(text: NSString, width: CGFloat, font: UIFont) -> CGFloat {
         let size = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
-        let rect = text.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
+        let rect = text.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
         return rect.size.height
     }
     
@@ -463,7 +463,7 @@ extension PNLineChart {
         let priceParagraphStyle: NSMutableParagraphStyle = NSParagraphStyle.default as! NSMutableParagraphStyle
         priceParagraphStyle.lineBreakMode = .byTruncatingTail
         priceParagraphStyle.alignment = .left
-        text.draw(in: rect, withAttributes: [NSAttributedStringKey.paragraphStyle: priceParagraphStyle])
+        text.draw(in: rect, withAttributes: [NSAttributedString.Key.paragraphStyle: priceParagraphStyle])
     }
     
     func userClickedOnLineKeyPoint(point: CGPoint, lineIndex: Int, keyPointIndex: Int) {
