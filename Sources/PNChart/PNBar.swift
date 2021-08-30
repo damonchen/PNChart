@@ -65,7 +65,7 @@ public class PNBar: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func draw(_ rect: CGRect) {
+    public override func draw(_ rect: CGRect) {
         // Draw BackGround
         let context = UIGraphicsGetCurrentContext()!
         context.setFillColor((self.backgroundColor?.cgColor)!)

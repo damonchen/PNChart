@@ -73,11 +73,12 @@ public class PNPieChart: PNGenericChart {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func awakeFromNib() {
+    public override func awakeFromNib() {
         super.awakeFromNib()
         self.baseInit()
     }
-    override func layoutSubviews() {
+    
+    public override func layoutSubviews() {
         super.layoutSubviews()
         self.strokeChart()
     }
@@ -304,7 +305,7 @@ extension PNPieChart {
         }
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             let touchLocation = touch.location(in: self.contentView)
             self.didTouchAt(touchLocation: touchLocation)

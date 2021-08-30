@@ -225,7 +225,7 @@ extension PNBarChart {
         }
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.touchPoint(touches, with: event)
         super.touchesBegan(touches, with: event)
     }
